@@ -2,9 +2,12 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Playful Bakery - Baked with Chaos & Love</title>
+    <title>SUGAR PUNCH | Playful Maximalism Bakery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&family=Spline+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -118,6 +121,22 @@
         100% { transform: translateY(0px) rotate(0deg); }
       }
 
+      @keyframes cart-pop {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2) rotate(-5deg); }
+        100% { transform: scale(1); }
+      }
+
+      @keyframes wave {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-5%); }
+        100% { transform: translateX(0); }
+      }
+
+      .animate-wave {
+        animation: wave 10s ease-in-out infinite;
+      }
+
       .animate-float {
         animation: float 6s ease-in-out infinite;
       }
@@ -125,8 +144,12 @@
       .animate-float-delayed {
         animation: float 7s ease-in-out infinite 2s;
       }
+
+      .animate-cart-pop {
+        animation: cart-pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
     </style>
-    <script type="module" crossorigin src="/assets/index-CMP1R8f-.js"></script>
+    <script type="module" crossorigin src="/assets/index-DJGu8R1-.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-rsdpEmEA.css">
   </head>
   <body>
