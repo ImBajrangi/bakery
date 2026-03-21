@@ -54,10 +54,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Wavy Divider */}
-      <div className="w-full overflow-hidden leading-none -mb-1 relative z-20">
-        <svg className="relative block w-full h-12 md:h-24" data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-          <path className="fill-surface stroke-text-main stroke-[4px]" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,113.4,192.27,98.66,238.13,87.65,283.47,70.52,321.39,56.44Z"></path>
+      {/* Dynamic Wavy Divider */}
+      <div className="w-full overflow-hidden leading-none -mb-1 relative z-20 h-16 md:h-32">
+        <svg className="relative block w-[120%] h-full min-w-full" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+          {/* Main Wave - Surface */}
+          <path 
+            className="fill-surface stroke-text-main stroke-[4px] animate-wave" 
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,113.4,192.27,98.66,238.13,87.65,283.47,70.52,321.39,56.44Z"
+          />
         </svg>
       </div>
 
