@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import logo from '../assets/cakeLogo.svg';
 
 const Header = () => {
   const { cartCount } = useCart();
@@ -21,8 +22,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-[100] bg-background-light border-b-heavy border-text-main px-4 md:px-6 py-3 md:py-4 flex items-center justify-between shadow-brutal-sm">
       <div className="flex items-center gap-2 md:gap-3">
-        <Link to="/" className="text-xl md:text-2xl font-black text-text-main rotate-[-2deg] hover:rotate-0 transition-transform cursor-pointer uppercase whitespace-nowrap p-1">
-          SUGAR PUNCH
+        <Link to="/" className="flex items-center gap-2 hover:rotate-[-2deg] transition-transform cursor-pointer p-1 group">
+          <img src={logo} alt="SUGAR PUNCH Logo" className="h-10 md:h-14 w-auto object-contain drop-shadow-sm group-hover:scale-110 transition-transform" />
+          <span className="hidden sm:block text-xl md:text-2xl font-black text-text-main uppercase tracking-tighter">SUGAR PUNCH</span>
         </Link>
       </div>
       <div className="flex items-center gap-3 md:gap-8">
