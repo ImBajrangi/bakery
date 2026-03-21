@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Playful Maximalism Bakery - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Quicksand:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF85A1",
+                        "background-light": "#FFF6D9",
+                        "background-dark": "#FFF6D9", // Keeping same for playful brand consistency if dark mode toggled
+                        "surface": "#FFFFFF",
+                        "text-main": "#4A2E2B",
+                        "muted": "#A67C52",
+                        "accent": "#A7E8D0",
+                    },
+                    fontFamily: {
+                        "display": ["'Fredoka One'", "cursive"],
+                        "body": ["'Quicksand'", "sans-serif"],
+                    },
+                    borderWidth: {
+                        'heavy': '4px',
+                    },
+                    boxShadow: {
+                        'brutal': '8px 8px 0px #FF85A1',
+                        'brutal-hover': '12px 12px 0px #A7E8D0',
+                        'brutal-sm': '4px 4px 0px #FF85A1',
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1.5rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for specific playful brutalist effects */
+        .text-shadow-brutal {
+            text-shadow: 4px 4px 0px #FF85A1;
+        }
+        
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+
+        /* Subtle float animation for hero images */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 7s ease-in-out infinite 2s;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main font-body min-h-screen flex flex-col overflow-x-hidden selection:bg-accent selection:text-text-main">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background-light border-b-heavy border-text-main px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-full border-heavy border-text-main flex items-center justify-center shadow-brutal-sm">
+<span class="material-symbols-outlined text-surface font-bold">cake</span>
+</div>
+<h2 class="font-display text-2xl tracking-wide uppercase text-text-main">Playful Bakery</h2>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-6 font-display text-lg">
+<a class="hover:text-primary transition-colors underline decoration-heavy decoration-transparent hover:decoration-primary underline-offset-4" href="#">Menu</a>
+<a class="hover:text-primary transition-colors underline decoration-heavy decoration-transparent hover:decoration-primary underline-offset-4" href="#">Our Story</a>
+</nav>
+<button class="flex items-center justify-center gap-2 h-12 px-6 bg-surface rounded-full border-heavy border-text-main shadow-brutal hover:shadow-brutal-hover hover:-translate-y-1 transition-all duration-300 font-display text-lg group">
+<span class="material-symbols-outlined group-hover:animate-bounce">shopping_cart</span>
+<span class="bg-accent text-text-main w-6 h-6 rounded-full flex items-center justify-center text-sm border-2 border-text-main -ml-1">0</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[800px] flex items-center justify-center px-6 py-20 overflow-hidden">
+<!-- Background Blob -->
+<div class="absolute w-[600px] h-[600px] bg-accent blob-shape opacity-50 blur-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"></div>
+<!-- Floating Pastries (Decorative) -->
+<img alt="Pink frosted donut cutout" class="absolute top-20 left-10 w-48 h-48 object-cover rounded-full border-[10px] border-surface shadow-brutal animate-float hidden md:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA3LCI7SCK2BF2lgRXXRwXLobG9af0YMaRVD-maAf6oMxk4qClRnqerQWuWDPv6hCs7qUeE7Moh6D0q_dMo0kCkAL4sFm4iAK0evbMiRXJwtBuW4UkiAuqxbKqAwf353VOqYAVoXAkkV7RTnjBjA_ECsBWvzyhpZTL96R1cYRYZP9OT0jgs0a68a0tO9oaYpH3Q-3Jup2aQmD0c6G--k7p-nPhNAkbVaMuyal4AJpw18d9-P1D-2lK_1ItVPoHyclym9CFgzO1cQC_"/>
+<img alt="Chocolate cake slice cutout" class="absolute bottom-20 right-10 w-56 h-56 object-cover rounded-full border-[10px] border-surface shadow-brutal animate-float-delayed hidden md:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJK8NzsGt0GOQG5y-X007cB1CBtiPcswiqsNhModvtDdDMagA61FskMaSEwpg3hVPquYI16rfTieDDXwOkyQwch1z8qjlWyvP5hDNgA4aqUeatNwD-Gpw5Nef8TpqQJuARZnLoQafNkO5U189p5QVlFd8iSQ1QFq8aY_ICQ3gAECKDoIb6WgxHlpJMaYjPiOTIyIwhKWuGh6PssxrJt-y6A0RT-g6jsz7PKoLvCEw3yPmx9gcAZLxTit-sypZMA1tkh6gW0Sn9Lm2s"/>
+<img alt="Sprinkled cupcake cutout" class="absolute top-40 right-32 w-40 h-40 object-cover rounded-full border-[10px] border-surface shadow-brutal animate-float hidden lg:block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCC221z7OxH9RQ64wqW4aT8vOLsJuMq1Y7F_Ht5J-dJyErOxKPNdqymPPNBsFl7BKC2oVp7vVKKYG9AIK1AKqGTxqs0mU56_O8aVudw1mz-ZdCUqINMmdF_UlwTx7idxSb9UprF2JcFbgeCqeBI8_Th9Iu43LHYuzbC63X2TYnoIU4dED-3u38JaItPC3VqrkJ6ujGTHkiFkaeCdLeLa6PP1B5MrwTINOq75rVO1xIqoTbTOSud2rtPCmCwPUe9UQUl986_2nNQkHR"/>
+<!-- Hero Content -->
+<div class="relative z-10 text-center max-w-4xl flex flex-col items-center gap-8">
+<h1 class="font-display text-5xl md:text-7xl leading-tight uppercase text-text-main text-shadow-brutal">
+                    BAKED WITH CHAOS &amp; LOVE
+                </h1>
+<p class="font-body font-bold text-xl md:text-2xl text-text-main max-w-2xl bg-surface/80 p-4 rounded-xl border-heavy border-text-main inline-block">
+                    A vibrant, unapologetically sweet digital storefront for treat enthusiasts and dessert lovers.
+                </p>
+<button class="mt-4 h-16 px-10 bg-primary text-surface font-display text-2xl uppercase rounded-full border-heavy border-text-main shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all duration-300 flex items-center gap-3">
+                    GIMME SUGAR
+                    <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Wavy Divider -->
+<div class="w-full overflow-hidden leading-none -mb-1 relative z-20">
+<svg class="relative block w-full h-12 md:h-24" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path class="fill-surface stroke-text-main stroke-[4px]" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,113.4,192.27,98.66,238.13,87.65,283.47,70.52,321.39,56.44Z"></path>
+</svg>
+</div>
+<!-- Bestsellers Section -->
+<section class="bg-surface py-24 px-6 relative z-10">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-16 border-b-heavy border-text-main pb-6">
+<h2 class="font-display text-4xl md:text-5xl uppercase text-text-main relative inline-block">
+<span class="relative z-10">Our Bestsellers</span>
+<div class="absolute bottom-1 left-0 w-full h-4 bg-accent -z-10 rounded-full"></div>
+</h2>
+<a class="hidden md:flex font-display text-xl text-primary hover:text-text-main transition-colors items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Card 1 -->
+<div class="bg-surface rounded-[24px] border-heavy border-text-main shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="h-64 border-b-heavy border-text-main overflow-hidden relative bg-background-light">
+<!-- Price Badge -->
+<div class="absolute top-4 right-4 bg-background-light text-text-main font-bold text-sm px-3 py-1 rounded-full border-heavy border-text-main z-10">
+                                $4.50
+                            </div>
+<img alt="Pink frosted cupcake with sprinkles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IRfkk9T3DZQOSe3hMmoVmko6KnQ9sK_OaBO-bBGt9RbTFaabCKsuJFdPJO3FumGcJRfh3v2TvGxR8f7xt6Bwdb0kTX6_CFTZy3slR9BDy16s_1vqw3G6txLQgdxOnbfLde1TroOSkZM3GfdCEf62JiHo33A3C4vLuq7FXVBQXLpNiYF21lxBYHl15TjYaD67GRHX8iG6_3wfPEy7AYvWOjMOcOphHS3xPp3bhxdRuOLSi01xgWDHfy2IFDOGwatG8OmsjlLY50Gx"/>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-display text-2xl text-text-main leading-none">Cosmic Cupcake</h3>
+<p class="font-body font-semibold text-muted text-sm flex-grow">Vanilla bean cake injected with strawberry jam and topped with chaotic sprinkles.</p>
+<button class="w-full h-12 bg-primary text-surface font-display text-lg uppercase rounded-full border-heavy border-text-main active:scale-y-90 transition-transform flex items-center justify-center gap-2 mt-auto hover:bg-accent hover:text-text-main">
+<span class="material-symbols-outlined">add</span> ADD TO BOX
+                            </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-[24px] border-heavy border-text-main shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="h-64 border-b-heavy border-text-main overflow-hidden relative bg-background-light">
+<div class="absolute top-4 right-4 bg-background-light text-text-main font-bold text-sm px-3 py-1 rounded-full border-heavy border-text-main z-10">
+                                $5.00
+                            </div>
+<img alt="Chunky chocolate chip cookie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfnRDgYhKj7C_n6ab3J8jS8QpEo9svbTD05XvshsYGrbfqObs2_jq_C0K1k0n4f-296MdkLHMPVP4Pvl0e7-DVFEM_kBOOQycEsuRkVTIK1YeTjxhN-ZK-ErcV6bsO1C8cGhoCMoAUWoOnb6tCki_78AVz0mLYB-Rgfr0azg26UWVnk61eHddnrLBYSvAbm0uhnGUACc9FX6M_hXmV02dHUNR9tIpcyx7EQxgmmr5wE1ae2YbRAmwwgRHliLpx2ng3vKRi8hBlkNb-"/>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-display text-2xl text-text-main leading-none">Chonky Choc Cookie</h3>
+<p class="font-body font-semibold text-muted text-sm flex-grow">A massive, gooey center cookie loaded with three types of chocolate chunks.</p>
+<button class="w-full h-12 bg-primary text-surface font-display text-lg uppercase rounded-full border-heavy border-text-main active:scale-y-90 transition-transform flex items-center justify-center gap-2 mt-auto hover:bg-accent hover:text-text-main">
+<span class="material-symbols-outlined">add</span> ADD TO BOX
+                            </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-[24px] border-heavy border-text-main shadow-brutal hover:shadow-brutal-hover hover:-translate-y-2 transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="h-64 border-b-heavy border-text-main overflow-hidden relative bg-background-light">
+<div class="absolute top-4 right-4 bg-background-light text-text-main font-bold text-sm px-3 py-1 rounded-full border-heavy border-text-main z-10">
+                                $4.00
+                            </div>
+<img alt="Strawberry glazed donut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9pgbyZussrN4DeOFv6ppSrxWpfog37zDtfAbV6WfY3xUlKsP7G_dpfKoMJqD3OX0e81KHhpAiTJxAq_Z6ZKGT1xkx6352Bvt7O9oVrVcrUHJWKuUov_WnQ8GFtnkNE0B7DQQAlLXywh243zUudwYhYLa2Mxcl-1e4PXzWWIEHHVB5JWUVN_Q_IxAsADz3QxDDs7LoRihfTB1Bc81CO2ltB1d5ZbPIJmPufjwfMdaOIwZWPXbioUkTMudS9jTCdkNX_ji1EolYmttn"/>
+</div>
+<div class="p-6 flex flex-col flex-grow gap-4">
+<h3 class="font-display text-2xl text-text-main leading-none">Strawberry Cloud</h3>
+<p class="font-body font-semibold text-muted text-sm flex-grow">Pillow-soft yeast yeast donut smothered in real strawberry glaze.</p>
+<button class="w-full h-12 bg-primary text-surface font-display text-lg uppercase rounded-full border-heavy border-text-main active:scale-y-90 transition-transform flex items-center justify-center gap-2 mt-auto hover:bg-accent hover:text-text-main">
+<span class="material-symbols-outlined">add</span> ADD TO BOX
+                            </button>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center md:hidden">
+<a class="inline-flex font-display text-xl bg-background-light px-8 py-4 rounded-full border-heavy border-text-main shadow-brutal text-text-main items-center gap-2" href="#">
+                        View All Menu <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary border-t-heavy border-text-main py-12 px-6 text-surface">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-surface rounded-full border-heavy border-text-main flex items-center justify-center shadow-brutal-sm">
+<span class="material-symbols-outlined text-text-main font-bold text-2xl">cake</span>
+</div>
+<h2 class="font-display text-3xl tracking-wide uppercase text-text-main text-shadow-brutal">Playful Bakery</h2>
+</div>
+<p class="font-body font-bold text-lg text-text-main text-center md:text-right border-heavy border-text-main bg-surface px-6 py-3 rounded-full shadow-brutal-sm">
+                © 2024 Baked with chaos.
+            </p>
+</div>
+</footer>
+</body></html>

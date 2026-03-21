@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Playful Maximalism Bakery - Our Story</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f6557b",
+                        "background-light": "#FFF6D9", // Buttery Yellow from spec
+                        "background-dark": "#221014",
+                        "surface": "#FFFFFF",
+                        "text-dark": "#4A2E2B",
+                        "accent": "#A7E8D0",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    boxShadow: {
+                        'brutal': '8px 8px 0px #f6557b',
+                        'brutal-hover': '12px 12px 0px #A7E8D0',
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .border-heavy { border: 4px solid #4A2E2B; }
+        .polaroid { transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .polaroid:hover { transform: rotate(0deg) translateY(-8px); box-shadow: 12px 12px 0px #A7E8D0; }
+        .blob-mask { border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%; }
+        .text-shadow-pink { text-shadow: 4px 4px 0px #f6557b; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<!-- Top Navigation (Reused & Modified) -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-background-light border-b-4 border-text-dark px-6 py-4 md:px-10">
+<div class="flex items-center gap-4 text-text-dark">
+<div class="size-8 bg-primary rounded-full border-2 border-text-dark flex items-center justify-center shadow-[2px_2px_0px_#4A2E2B]">
+<span class="material-symbols-outlined text-white text-xl">bakery_dining</span>
+</div>
+<h2 class="text-text-dark text-xl font-black tracking-tight uppercase">PM Bakery</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 md:gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-text-dark text-lg font-bold hover:text-primary transition-colors" href="#">Menu</a>
+<a class="text-primary text-lg font-black border-b-4 border-primary" href="#">Our Story</a>
+</nav>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-primary text-white text-lg font-black border-heavy shadow-brutal hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-[6px_6px_0px_#4A2E2B] transition-all">
+<span>Cart (0)</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 md:py-32 flex flex-col items-center justify-center text-center overflow-hidden">
+<!-- Decorative Blobs -->
+<div class="absolute top-10 left-10 w-64 h-64 bg-accent rounded-full blur-3xl opacity-50 -z-10"></div>
+<div class="absolute bottom-10 right-10 w-80 h-80 bg-primary rounded-full blur-3xl opacity-20 -z-10"></div>
+<h1 class="text-text-dark text-5xl md:text-7xl font-black leading-tight tracking-[-0.033em] uppercase max-w-4xl text-shadow-pink mb-6">
+                THE CHAOS BEHIND THE MAGIC
+            </h1>
+<p class="text-text-dark text-xl md:text-2xl font-bold max-w-2xl mb-12 bg-surface px-6 py-3 border-heavy rounded-full shadow-[4px_4px_0px_#A7E8D0]">
+                Meet the bakers behind the unapologetically sweet madness.
+            </p>
+<div class="relative w-full max-w-3xl aspect-video blob-mask border-heavy overflow-hidden shadow-brutal mx-auto">
+<img alt="Team of bakers laughing in a colorful kitchen" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfF8Oyf4USW0i4eE-cADX4lvy4grO7kdvZ52yCAfqJLreQhKnrzNjomFMRnpGsVqucSjuMeS6lRrC0zxv5AkzQ5SHa0C7SSb00ul5YiTCICbXefS9IU9P5cHvPlLGUsDxNwBAtfSnZjitTF4NPltiTUtiTrlgcDnQKACqtyA6VISHX_W9cH9kK_xmGO1XXwUoc4z8D-LpO8mcyQjU4SdDOa3pNdUK30e5pq1x99xqqUsREZ5AFcP9LUfKGqbw7MB0dmGSLJZSZLnHX"/>
+</div>
+</section>
+<!-- Wavy Divider -->
+<div class="w-full overflow-hidden leading-none text-surface">
+<svg class="relative block w-full h-16 md:h-24" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,114.62,189.9,91.84,233.91,74.87,276.9,64.67,321.39,56.44Z" fill="currentColor"></path>
+</svg>
+</div>
+<!-- The Journey (Zig-Zag) -->
+<section class="bg-surface py-20 px-6 md:px-10 border-b-4 border-text-dark">
+<div class="max-w-6xl mx-auto flex flex-col gap-24">
+<!-- Row 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+<div class="w-full md:w-1/2 flex-1">
+<div class="polaroid bg-surface p-4 pb-16 border-heavy rounded-xl shadow-brutal rotate-3 mx-auto max-w-md relative">
+<img alt="Messy table with flour and baking ingredients" class="w-full h-64 object-cover rounded-lg border-2 border-text-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC5ZCfhVWhnPlvwq2XI2e1GjVQmTSyO-yhIfKQ1hYa5C0Xd_9jTm0N2Xao4QRi8ffZRzdXLMwMGDgBE-aqNGwpQHtrILdbsRX_JZqS_EZ_s2X3mFZ68eJPTpds9yc01DzMrzQ9xdsDOf5Z4TxdZJi-Pi8-8YbNNrXXnAl7ylgl9H5owakTU2nW4zpEBnLQlcvSMqyf_kIJGJ-KzPNQfw6gZ8CP2Mf2-Ni2czNie9JJsp7ZZHy0uV9AO-F3ocxbTsbYAhcjSnuyKJgZ"/>
+<span class="absolute bottom-4 left-6 text-text-dark font-black text-xl">The First Mess (2018)</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h3 class="text-4xl font-black uppercase text-primary">Accidental Genius</h3>
+<p class="text-xl font-medium leading-relaxed text-text-dark">
+                            It started with a spectacular failure. A dropped tray of cookies, too much frosting, and a healthy disregard for traditional recipes. We realized that sometimes, the biggest messes taste the absolute best.
+                        </p>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-20">
+<div class="w-full md:w-1/2 flex-1">
+<div class="polaroid bg-surface p-4 pb-16 border-heavy rounded-xl shadow-brutal -rotate-3 mx-auto max-w-md relative">
+<img alt="Extravagant pink frosted cake with sprinkles" class="w-full h-64 object-cover rounded-lg border-2 border-text-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgX9nHbvr7YTL9fcfKX2Tx1Pt8Kr0X4u8DAg1KGYqAyvYxxvf2ZoDI3x5XcOEW09aRcbTxq4FL4z32reybrImQWvW6On9LkBSH6zzHOxma7Ql7Z_ajcuRf6lYFI-FwOWNFAvViV4LwzDzQxkHOtQZxZECjRQGRi6m5hJYS2Kt0fLwH6PK_DuSmyPHKR5ydq9Y1qdGnLEzrc0K_YTvyxFPcOYtgM1im5oFuGNEr1E3gtNLAfPm1dG_wBV8UqhxFp2us508GScNykv0h"/>
+<span class="absolute bottom-4 left-6 text-text-dark font-black text-xl">More is More!</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h3 class="text-4xl font-black uppercase text-accent text-shadow-pink">Embracing the Muchness</h3>
+<p class="text-xl font-medium leading-relaxed text-text-dark">
+                            Why have one sprinkle when you can have ten thousand? We threw out the rulebook on minimalism. Our philosophy: if it doesn't make you gasp slightly when you open the box, we haven't done our job.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values -->
+<section class="bg-background-light py-24 px-6 md:px-10">
+<div class="max-w-6xl mx-auto text-center">
+<h2 class="text-5xl font-black uppercase mb-16 inline-block bg-primary text-white px-8 py-4 rounded-xl border-heavy shadow-brutal rotate-[-2deg]">
+                    Our Holy Trinity
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Value 1 -->
+<div class="flex flex-col items-center gap-6 bg-surface p-8 rounded-[3rem] border-heavy shadow-[8px_8px_0px_#A7E8D0]">
+<div class="size-24 bg-accent rounded-full border-heavy flex items-center justify-center shadow-[4px_4px_0px_#4A2E2B]">
+<span class="material-symbols-outlined text-5xl text-text-dark">egg</span>
+</div>
+<h4 class="text-3xl font-black uppercase">Butter</h4>
+<p class="text-lg font-bold text-center">We don't know the meaning of "just a pinch". If a recipe calls for a stick, we use two.</p>
+</div>
+<!-- Value 2 -->
+<div class="flex flex-col items-center gap-6 bg-surface p-8 rounded-[3rem] border-heavy shadow-[8px_8px_0px_#f6557b] translate-y-0 md:translate-y-8">
+<div class="size-24 bg-primary rounded-full border-heavy flex items-center justify-center shadow-[4px_4px_0px_#4A2E2B]">
+<span class="material-symbols-outlined text-5xl text-white">cookie</span>
+</div>
+<h4 class="text-3xl font-black uppercase text-primary">Sugar</h4>
+<p class="text-lg font-bold text-center">Unapologetically sweet. We source the weirdest, wildest sugars from around the globe.</p>
+</div>
+<!-- Value 3 -->
+<div class="flex flex-col items-center gap-6 bg-surface p-8 rounded-[3rem] border-heavy shadow-[8px_8px_0px_#A7E8D0]">
+<div class="size-24 bg-accent rounded-full border-heavy flex items-center justify-center shadow-[4px_4px_0px_#4A2E2B]">
+<span class="material-symbols-outlined text-5xl text-text-dark">auto_awesome</span>
+</div>
+<h4 class="text-3xl font-black uppercase">Magic</h4>
+<p class="text-lg font-bold text-center">That unquantifiable chaos that turns a standard cupcake into an experience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface py-32 px-6 border-t-4 border-text-dark text-center flex flex-col items-center justify-center">
+<h2 class="text-4xl md:text-6xl font-black uppercase mb-10 max-w-2xl text-text-dark">
+                Ready to join the party?
+            </h2>
+<button class="flex items-center justify-center rounded-full h-20 px-12 bg-primary text-white text-2xl font-black border-heavy shadow-brutal hover:scale-105 transition-transform">
+<span class="tracking-wider">TASTE THE MAGIC</span>
+</button>
+</section>
+</main>
+</div>
+</body></html>

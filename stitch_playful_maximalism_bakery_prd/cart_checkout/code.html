@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Playful Bakery - Cart &amp; Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f6557b",
+                        "background-light": "#FFF6D9",
+                        "background-dark": "#221014",
+                        "surface": "#FFFFFF",
+                        "text-main": "#4A2E2B",
+                        "accent": "#A7E8D0",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                    boxShadow: {
+                        'brutal': '8px 8px 0px #f6557b',
+                        'brutal-hover': '12px 12px 0px #A7E8D0',
+                        'brutal-input': '4px 4px 0px #f6557b',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+            color: #4A2E2B;
+        }
+        .border-heavy {
+            border: 4px solid #4A2E2B;
+        }
+        .border-medium {
+            border: 3px solid #4A2E2B;
+        }
+        /* Custom scrollbar for the cart area if it gets long */
+        .cart-scroll::-webkit-scrollbar {
+            width: 12px;
+        }
+        .cart-scroll::-webkit-scrollbar-track {
+            background: #FFF6D9;
+            border-left: 4px solid #4A2E2B;
+        }
+        .cart-scroll::-webkit-scrollbar-thumb {
+            background-color: #f6557b;
+            border: 4px solid #4A2E2B;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display selection:bg-primary selection:text-white">
+<!-- Top Navigation -->
+<div class="relative flex h-auto w-full flex-col bg-surface group/design-root border-b-4 border-[#4A2E2B]">
+<div class="layout-container flex h-full grow flex-col w-full max-w-7xl mx-auto">
+<header class="flex items-center justify-between whitespace-nowrap px-6 lg:px-10 py-4">
+<a class="flex items-center gap-3 text-text-main hover:scale-105 transition-transform duration-200" href="#">
+<div class="size-8 bg-primary rounded-full border-heavy shadow-[4px_4px_0px_#4A2E2B] flex items-center justify-center text-white">
+<span class="material-symbols-outlined font-bold" style="font-size: 20px;">cake</span>
+</div>
+<h2 class="text-text-main text-2xl font-black leading-tight tracking-[-0.015em] uppercase">Playful Bakery</h2>
+</a>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-text-main text-lg font-bold hover:text-primary transition-colors uppercase" href="#">Menu</a>
+<a class="text-text-main text-lg font-bold hover:text-primary transition-colors uppercase" href="#">Our Story</a>
+</div>
+<button class="flex cursor-pointer items-center justify-center rounded-full h-12 bg-accent text-text-main gap-2 text-base font-black px-6 border-heavy shadow-[4px_4px_0px_#4A2E2B] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_#4A2E2B] transition-all duration-200 active:translate-y-[4px] active:shadow-none">
+<span class="material-symbols-outlined font-bold">shopping_cart</span>
+<span>3 items</span>
+</button>
+</div>
+</header>
+</div>
+</div>
+<!-- Main Content: Split Screen layout -->
+<main class="flex-1 w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 p-6 lg:p-10">
+<!-- Left Pane: Cart Review (60%) -->
+<section class="w-full lg:w-[60%] flex flex-col gap-6">
+<div class="flex items-center justify-between mb-2">
+<h1 class="text-4xl lg:text-5xl font-black uppercase text-text-main drop-shadow-[4px_4px_0px_#A7E8D0]">Your Box of Joy</h1>
+<a class="hidden sm:flex items-center gap-1 text-primary font-bold hover:underline" href="#">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+                    Back to Menu
+                </a>
+</div>
+<!-- Cart Items Container -->
+<div class="flex flex-col gap-5 cart-scroll lg:overflow-y-auto lg:pr-4 lg:max-h-[calc(100vh-250px)]">
+<!-- Cart Item 1 -->
+<div class="bg-surface rounded-3xl border-heavy p-4 flex items-center gap-4 shadow-[6px_6px_0px_#4A2E2B] hover:translate-y-[-4px] hover:shadow-brutal transition-all duration-300">
+<div class="w-24 h-24 rounded-full border-heavy overflow-hidden bg-background-light shrink-0">
+<img alt="Pink frosted donut with sprinkles" class="w-full h-full object-cover" data-alt="Pink frosted donut with sprinkles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfUBgfctX9cw4rGFp_mlBXisqEDJhjHxjKnRKx9Y3Mxu4G6QVpfQi6hQFeGymBaih3OJ_lXWdfDpg8AeIgOU8oQfF5OBcx7c7RmsZfNopZreu6XhGn-x9eVRj35Alapagwp0PSARZS-sNRXsWNS_wBOrK7TOAW-y-_iXpSqfJ8f3Qvg4f5aErRdodcU38DyKtgoGZy40xUqr6mGZXOJPFxlR7RZtZHeYePA_afCtmdbOB5ewL-GD_-GL9hMLFLPn9DjFrt0Kfv17kf"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h3 class="text-xl font-black uppercase line-clamp-1">Homer's Dream Donut</h3>
+<p class="text-primary font-black text-lg">$4.50</p>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="text-text-main/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+<!-- Quantity Selector Pill -->
+<div class="flex items-center bg-surface border-medium rounded-full overflow-hidden h-10 w-28">
+<button class="flex-1 h-full flex items-center justify-center hover:bg-accent hover:text-text-main transition-colors font-black text-xl active:bg-primary border-r-medium">
+                                -
+                            </button>
+<div class="flex-1 h-full flex items-center justify-center font-black text-lg bg-background-light">
+                                2
+                            </div>
+<button class="flex-1 h-full flex items-center justify-center hover:bg-accent hover:text-text-main transition-colors font-black text-xl active:bg-primary border-l-medium">
+                                +
+                            </button>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="bg-surface rounded-3xl border-heavy p-4 flex items-center gap-4 shadow-[6px_6px_0px_#4A2E2B] hover:translate-y-[-4px] hover:shadow-brutal transition-all duration-300">
+<div class="w-24 h-24 rounded-full border-heavy overflow-hidden bg-background-light shrink-0">
+<img alt="Chocolate cupcake with tall frosting" class="w-full h-full object-cover" data-alt="Chocolate cupcake with tall frosting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjuSJMXeTge69Z3Wvp1jboGn8z9agxT5P9I4dCeSdvSniYdJNea-dxBONBnPT2pehVSNd1YQPNV8dLjBGvQU600hfsOtssdmFqiM7B6kNwYBMIl7ySmD-nihiPVZzEeb2DLKBFF_ZgZ0LjU91iM7a1-GlGU2fsnplogM1ZQO2ffOroQVJXztiGojlQESvQxcOXMdQIseBLBpwcrX0EYFo-eA5ETZuty15_rrIqBBu6Z4f75lWuRDixIIl_cT7MuwswjPobIyQiaVCV"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h3 class="text-xl font-black uppercase line-clamp-1">Choco-Mountain Cupcake</h3>
+<p class="text-primary font-black text-lg">$6.00</p>
+</div>
+<div class="flex flex-col items-end gap-2 shrink-0">
+<button class="text-text-main/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+<div class="flex items-center bg-surface border-medium rounded-full overflow-hidden h-10 w-28">
+<button class="flex-1 h-full flex items-center justify-center hover:bg-accent hover:text-text-main transition-colors font-black text-xl active:bg-primary border-r-medium">-</button>
+<div class="flex-1 h-full flex items-center justify-center font-black text-lg bg-background-light">1</div>
+<button class="flex-1 h-full flex items-center justify-center hover:bg-accent hover:text-text-main transition-colors font-black text-xl active:bg-primary border-l-medium">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Back to Menu -->
+<a class="sm:hidden flex items-center justify-center gap-2 text-primary font-bold hover:underline mt-4" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+                Back to Menu
+            </a>
+</section>
+<!-- Right Pane: Checkout Form (40%) -->
+<section class="w-full lg:w-[40%] flex flex-col">
+<div class="bg-surface border-heavy rounded-3xl shadow-brutal p-6 lg:p-8 flex flex-col gap-8 lg:sticky lg:top-8">
+<!-- Massive Total Banner -->
+<div class="bg-primary border-heavy rounded-2xl p-6 text-white flex flex-col items-center justify-center transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+<span class="text-xl font-bold uppercase mb-1 text-white/90">Total Sugar Damage</span>
+<span class="text-5xl font-black tracking-tighter drop-shadow-[4px_4px_0px_#4A2E2B]">$15.00</span>
+</div>
+<form class="flex flex-col gap-6">
+<!-- Delivery Info -->
+<div class="flex flex-col gap-4">
+<h2 class="text-2xl font-black uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+                            Where to?
+                        </h2>
+<div class="flex flex-col gap-3">
+<input class="w-full h-14 bg-background-light border-heavy rounded-full px-6 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200" placeholder="Full Name" type="text"/>
+<input class="w-full h-14 bg-background-light border-heavy rounded-full px-6 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200" placeholder="Email Address" type="email"/>
+<textarea class="w-full bg-background-light border-heavy rounded-2xl px-6 py-4 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200 resize-none" placeholder="Delivery Address" rows="2"></textarea>
+</div>
+</div>
+<!-- Payment Info -->
+<div class="flex flex-col gap-4 mt-2">
+<h2 class="text-2xl font-black uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-3xl">credit_card</span>
+                            Pay Up
+                        </h2>
+<div class="flex flex-col gap-3">
+<input class="w-full h-14 bg-background-light border-heavy rounded-full px-6 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200" placeholder="Card Number" type="text"/>
+<div class="flex gap-3">
+<input class="w-1/2 h-14 bg-background-light border-heavy rounded-full px-6 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200 text-center" placeholder="MM/YY" type="text"/>
+<input class="w-1/2 h-14 bg-background-light border-heavy rounded-full px-6 font-bold text-lg placeholder-text-main/50 focus:outline-none focus:bg-surface focus:border-primary focus:shadow-brutal-input transition-all duration-200 text-center" placeholder="CVC" type="text"/>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-16 mt-4 bg-accent text-text-main font-black text-2xl uppercase rounded-full border-heavy shadow-[6px_6px_0px_#4A2E2B] hover:translate-y-[-4px] hover:shadow-[10px_10px_0px_#4A2E2B] hover:bg-primary hover:text-white transition-all duration-200 active:translate-y-[4px] active:shadow-none flex items-center justify-center gap-3" type="button">
+                        Gimme Sugar!
+                        <span class="material-symbols-outlined font-bold text-3xl">rocket_launch</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+</body></html>

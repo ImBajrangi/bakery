@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playful Bakery - Baked with Chaos & Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&family=Spline+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@20..48,100..700,0..1,-25..0&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF85A1",
+              "primary-hover": "#f6557b",
+              "background-light": "#FFF6D9",
+              "background-dark": "#221014",
+              "surface": "#FFFFFF",
+              "text-main": "#4A2E2B",
+              "muted": "#A67C52",
+              "accent": "#A7E8D0",
+            },
+            fontFamily: {
+              "display": ["'Fredoka One'", "cursive"],
+              "body": ["'Spline Sans'", "sans-serif"],
+              "secondary": ["'Quicksand'", "sans-serif"],
+            },
+            borderWidth: {
+              'heavy': '4px',
+              'medium': '3px',
+            },
+            boxShadow: {
+              'brutal': '8px 8px 0px #FF85A1',
+              'brutal-hover': '12px 12px 0px #A7E8D0',
+              'brutal-sm': '4px 4px 0px #FF85A1',
+              'brutal-input': '4px 4px 0px #FF85A1',
+            },
+            borderRadius: {
+              "DEFAULT": "1rem",
+              "lg": "2rem",
+              "xl": "3rem",
+              "2xl": "1.5rem",
+              "3xl": "24px",
+            },
+          },
+        },
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-background-light text-text-main font-body min-h-screen antialiased overflow-x-hidden;
+        }
+      }
+
+      @layer components {
+        .text-shadow-brutal {
+          text-shadow: 4px 4px 0px #FF85A1;
+        }
+        
+        .text-shadow-pink {
+          text-shadow: 4px 4px 0px #f6557b;
+        }
+
+        .blob-shape {
+          border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+        
+        .blob-mask {
+          border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .border-heavy {
+          border-width: 4px;
+          border-style: solid;
+          @apply border-text-main;
+        }
+
+        .border-medium {
+          border-width: 3px;
+          border-style: solid;
+          @apply border-text-main;
+        }
+
+        .btn-squish:active {
+          @apply scale-y-95 translate-y-1;
+        }
+
+        .filter-pill {
+          @apply flex items-center gap-3 px-6 py-4 rounded-full border-heavy bg-surface font-bold text-lg whitespace-nowrap transition-all duration-300;
+        }
+        
+        .filter-pill[aria-selection="true"] {
+          @apply bg-accent translate-x-2 shadow-brutal-sm;
+        }
+        
+        .filter-pill[aria-selected="false"]:hover {
+          @apply rotate-1 shadow-[4px_4px_0px_#A7E8D0];
+        }
+
+        .polaroid {
+          @apply bg-surface p-4 pb-16 border-heavy rounded-xl shadow-brutal transition-all duration-300;
+        }
+        
+        .polaroid:hover {
+          @apply rotate-[5deg] shadow-brutal-hover;
+        }
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-float-delayed {
+        animation: float 7s ease-in-out infinite 2s;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CMP1R8f-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-rsdpEmEA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
